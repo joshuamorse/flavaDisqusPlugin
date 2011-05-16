@@ -8,6 +8,10 @@ A small toolbelt for streamlining disqus comments within Symfony.
 Configuration
 -------------
 
+Configuration values are stored in a server_configuration file. This allows 
+you to set different configuration values on a server-by-server basis, should 
+you choose to.
+
 If you don't have a config/server_configuration.php file, copy values from:
 
 
