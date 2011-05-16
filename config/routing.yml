@@ -1,0 +1,3 @@
+flava_disqus_index:
+  url: /disqus
+  param: { module: flavaDisqus, action: index }
