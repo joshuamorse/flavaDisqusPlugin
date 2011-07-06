@@ -2,14 +2,16 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_developer = '<?php echo sfConfig::get('disqus_developer') ?>';
-    <?php if (isset($identifier)): ?>
-      var disqus_identifier = '<?php echo $identifier ?>';
-    <?php endif ?>
     var disqus_shortname = '<?php echo sfConfig::get('disqus_shortname') ?>';
 
     // The following are highly recommended additional parameters. Remove the slashes in front to use.
-    // var disqus_identifier = 'unique_dynamic_id_1234';
-    // var disqus_url = 'http://example.com/permalink-to-page.html';
+    <?php if (isset($identifier)): ?>
+      var disqus_identifier = '<?php echo $identifier ?>';
+    <?php endif ?>
+
+    <?php if (isset($url)): ?>
+      var disqus_url = '<?php echo $url ?>';
+    <?php endif ?>
 
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {

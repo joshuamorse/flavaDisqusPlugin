@@ -35,9 +35,24 @@ If not, create a server configuration with the values within:
 Example Usage
 -------------
 
-Simply include the index partial in a view file:
+For Disqus comments, simply include the index partial in a view file:
 
 
     <?php include_partial('flavaDisqus/index', array(
       'identifier' => 'a_unique_identifier',
     )) ?>
+
+Or, load it into a div ('blog-post-disqus') via jQuery and the plugin's route:
+
+    <script type="text/javascript">
+      $('#blog-post-disqus').load('/disqus?identifier=<?php echo $blog_post->getDisqusIndentifier() ?>');
+    </script>
+
+
+For the Disqus comment count, include a comment count link and include the
+count partial:
+
+
+    <a href="<?php echo get_current_url() ?>#disqus_thread" data-disqus-identifier="<?php echo $blog_post->getDisqusIndentifier() ?>">0 Comments</a>
+    [...]
+    <?php include_partial('flavaDisqus/count') ?>

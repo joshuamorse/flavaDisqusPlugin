@@ -1,3 +1,7 @@
 flava_disqus_index:
   url: /disqus
   param: { module: flavaDisqus, action: index }
+
+flava_disqus_count:
+  url: /disqus-count
+  param: { module: flavaDisqus, action: count }
